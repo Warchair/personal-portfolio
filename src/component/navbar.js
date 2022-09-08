@@ -20,9 +20,8 @@ const Navbar = () => {
 
 	return (
 		<div
-			className='w-full fixed backdrop-blur-lg drop-shadow-lg z-plus'
-			onScroll={() => navScroll()}
-		>
+			className='w-full fixed backdrop-blur-lg drop-shadow-lg z-[999]'
+			onScroll={() => navScroll()}>
 			<div className='container px-8 py-8 mx-auto w-full'>
 				<div className='flex justify-between'>
 					<div>
@@ -32,16 +31,14 @@ const Navbar = () => {
 						<div class='nav-items flex gap-10 '>
 							<a
 								className='md:hidden block close cursor-pointer'
-								onClick={() => handleClick()}
-							>
+								onClick={() => handleClick()}>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									className='h-6 w-6'
 									fill='none'
 									viewBox='0 0 24 24'
 									stroke='currentColor'
-									strokeWidth={2}
-								>
+									strokeWidth={2}>
 									<path
 										strokeLinecap='round'
 										strokeLinejoin='round'
@@ -50,7 +47,6 @@ const Navbar = () => {
 								</svg>
 							</a>
 							<a href='#'>
-								{/* <i class='fa-solid fa-book'></i> */}
 								<p>About Me</p>
 							</a>
 							<a href='#'>
@@ -69,16 +65,14 @@ const Navbar = () => {
 					</div>
 					<a
 						className='md:hidden block cursor-pointer'
-						onClick={() => handleClick()}
-					>
+						onClick={() => handleClick()}>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							className='h-6 w-6'
 							fill='none'
 							viewBox='0 0 24 24'
 							stroke='currentColor'
-							strokeWidth={2}
-						>
+							strokeWidth={2}>
 							<path
 								strokeLinecap='round'
 								strokeLinejoin='round'

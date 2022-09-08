@@ -117,35 +117,28 @@ export const project = (
 export const interest = (
 	<div className='flex flex-col gap-10 md:w-1/2'>
 		<div>
-			<li className='text-lg font-semibold'>Learn</li>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam
-				labore earum, hic facilis, ipsum aperiam vel minima, ex consectetur eius
-				aliquid.
-			</p>
-		</div>
-		<div>
 			<li className='text-lg font-semibold'>Movie</li>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam
-				labore earum, hic facilis, ipsum aperiam vel minima, ex consectetur eius
-				aliquid.
+				Menonton film itu adalah sesuatu yang menyenangkan, apalagi jalan cerita
+				yang tidak bisa ditebak. nonton film juga bisa menjadi inspirasi yang
+				lewat, ntah meskipun diimplementasikan atau tidak heheh :)
 			</p>
 		</div>
 		<div>
 			<li className='text-lg font-semibold'>Traveling</li>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam
-				labore earum, hic facilis, ipsum aperiam vel minima, ex consectetur eius
-				aliquid.
+				Siapa yang tidak suka dengan hal yang satu ini, semua pasti suka. Begitu
+				juga dengan saya, saya lebih suka berlibur ke tempat tempat alam,
+				seperti pantai, curug, mendaki gunung, ataupun ke kebun kebun yang
+				udaranya masih segar.
 			</p>
 		</div>
 		<div>
 			<li className='text-lg font-semibold'>Music</li>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam
-				labore earum, hic facilis, ipsum aperiam vel minima, ex consectetur eius
-				aliquid.
+				Ada beberapa genre yang saya suka dari musik, seperti pop dan reggae.
+				Musik juga bisa menemani saya ketika ngoding atau mendesain yang membuat
+				suasana seperti nyaman dan santai
 			</p>
 		</div>
 	</div>
