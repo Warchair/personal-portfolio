@@ -10,9 +10,8 @@ import resume from "../assets/resume/resume.pdf"
 import { education, skills, project, interest } from "./resume"
 import gh from "../assets/logo/github.svg"
 import projectimg1 from "../assets/pictures/img1.png"
-import projectimg2 from "../assets/pictures/project2.png"
-import projectimg3 from "../assets/pictures/img2.png"
-import projectimg4 from "../assets/pictures/project4.png"
+import projectimg2 from "../assets/pictures/img2.png"
+import projectimg3 from "../assets/pictures/img3.png"
 import sayhello from "../assets/pictures/sayhello.png"
 
 export default function Home() {
@@ -261,16 +260,17 @@ export default function Home() {
 									</h3>
 									<div className='font-reguler md:text-lg text-md py-2'>
 										<p>
-											Lorem ipsum dolor sit amet consectetur adipisicing elit.
-											Illum, possimus, magnam error nobis nesciunt maxime nihil
-											quia voluptate vel ea omnis aliquid? Officiis quas, eos
-											rerum aspernatur at exercitationem assumenda.
+											Ini adalah sebuah Project Landing Page perusahaan yang
+											dibuat menggunakan HTML dan Framework TailwindCSS, design
+											UInya diambil dari{" "}
+											<a
+												href='https://www.figma.com/file/0z9t5dX3lLPovHATcwPz6W/EdTech-Landing-Page-(Community)?node-id=0%3A1'
+												className='text-blue-600'>
+												Figma
+											</a>
 										</p>
 										<p>
-											Lorem ipsum dolor sit amet consectetur adipisicing elit.
-											Illum, possimus, magnam error nobis nesciunt maxime nihil
-											quia voluptate vel ea omnis aliquid? Officiis quas, eos
-											rerum aspernatur at exercitationem assumenda.
+											Dibuat semirip mungkin dengan UI design yang sudah ada
 										</p>
 									</div>
 									<div className='flex gap-5 font-medium black py-2'>
@@ -364,144 +364,68 @@ export default function Home() {
 								</div>
 							</div>
 							<div>
-								{/* <img
-									src={projectimg2}
+								<div className='w-full h-full lg:block hidden'>
+									<img
+										src={projectimg2}
+										className='object-cover w-full h-full rounded-lg drop-shadow-2xl mt-24 z-[999]'
+										alt=''
+									/>
+								</div>
+							</div>
+						</div>
+						<div className='grid lg:grid-cols-2 grid-cols-1 gap-5 items-center relative'>
+							<div className='mt-20 w-full h-full   rounded-xl drop-shadow-xl lg:bg-transparent bg-white relative '>
+								<img
+									src={projectimg1}
+									className='top-0 absolute object-cover lg:hidden w-full h-full rounded-lg z-0 opacity-10'
 									alt=''
-									className='w-1/2 h-1/2 absolute top-0 -right-48 rounded-lg'
-								/> */}
+								/>
+								<div className='z-[999] lg:py-0 lg:px-0 px-10 py-10'>
+									<p className='font-reguler text-lg'>Featured Project</p>
+									<h3 className='font-semibold sm:text-5xl text-4xl md:py-5 py-2'>
+										Template Dashboard Course App
+									</h3>
+									<div className='font-reguler md:text-lg text-md py-2'>
+										<p>
+											Ini adalah sebuah template dashboard yang dibuat
+											menggunakan sebuah Library Framework React dan Tailwind.
+											serta beberapa library javascript lainnya.
+										</p>
+										<p>
+											Sudah menerapkan design yang responsive di berbagai device
+											dan juga interaktif. terdapat juga darkMode didalamnya
+										</p>
+									</div>
+									<div className='flex gap-5 font-medium black py-2'>
+										<span>React</span>
+										<span>TailwindCSS</span>
+									</div>
+									<div className='flex gap-5 py-2'>
+										<a href='https://github.com/Warchair/dashboard-course-app'>
+											<img src={gh} alt='' className='w-6 h-6' />
+										</a>
+										<a href='https://dashboard-course-app.netlify.app'>
+											<svg
+												xmlns='http://www.w3.org/2000/svg'
+												className='h-7 w-7'
+												fill='none'
+												viewBox='0 0 24 24'
+												stroke='currentColor'
+												strokeWidth={2}>
+												<path
+													strokeLinecap='round'
+													strokeLinejoin='round'
+													d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
+												/>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div>
 								<div className='w-full h-full lg:block hidden'>
 									<img
 										src={projectimg3}
-										className='object-cover w-full h-full rounded-lg drop-shadow-2xl mt-24 z-[999]'
-										alt=''
-									/>
-								</div>
-							</div>
-						</div>
-						<div className='grid lg:grid-cols-2 grid-cols-1 gap-5 items-center relative'>
-							<div className='mt-20 w-full h-full   rounded-xl drop-shadow-xl lg:bg-transparent bg-white relative '>
-								<img
-									src={projectimg1}
-									className='top-0 absolute object-cover lg:hidden w-full h-full rounded-lg z-0 opacity-10'
-									alt=''
-								/>
-								<div className='z-[999] lg:py-0 lg:px-0 px-10 py-10'>
-									<p className='font-reguler text-lg'>Featured Project</p>
-									<h3 className='font-semibold sm:text-5xl text-4xl md:py-5 py-2'>
-										Landing Page Company
-									</h3>
-									<div className='font-reguler md:text-lg text-md py-2'>
-										<p>
-											Lorem ipsum dolor sit amet consectetur adipisicing elit.
-											Illum, possimus, magnam error nobis nesciunt maxime nihil
-											quia voluptate vel ea omnis aliquid? Officiis quas, eos
-											rerum aspernatur at exercitationem assumenda.
-										</p>
-										<p>
-											Lorem ipsum dolor sit amet consectetur adipisicing elit.
-											Illum, possimus, magnam error nobis nesciunt maxime nihil
-											quia voluptate vel ea omnis aliquid? Officiis quas, eos
-											rerum aspernatur at exercitationem assumenda.
-										</p>
-									</div>
-									<div className='flex gap-5 font-medium black py-2'>
-										<span>HTML</span>
-										<span>TailwindCSS</span>
-										<span>React</span>
-									</div>
-									<div className='flex gap-5 py-2'>
-										<a href='https://github.com/Warchair/simple-homepage-2'>
-											<img src={gh} alt='' className='w-6 h-6' />
-										</a>
-										<svg
-											xmlns='http://www.w3.org/2000/svg'
-											className='h-7 w-7'
-											fill='none'
-											viewBox='0 0 24 24'
-											stroke='currentColor'
-											strokeWidth={2}>
-											<path
-												strokeLinecap='round'
-												strokeLinejoin='round'
-												d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
-											/>
-										</svg>
-									</div>
-								</div>
-							</div>
-							<div>
-								{/* <img
-									src={projectimg2}
-									alt=''
-									className='w-1/2 h-1/2 absolute top-0 -right-48 rounded-lg'
-								/> */}
-								<div className='w-full h-full lg:block hidden'>
-									<img
-										src={projectimg1}
-										className='object-cover w-full h-full rounded-lg drop-shadow-2xl mt-24 z-[999]'
-										alt=''
-									/>
-								</div>
-							</div>
-						</div>
-						<div className='grid lg:grid-cols-2 grid-cols-1 gap-5 items-center relative'>
-							<div className='mt-20 w-full h-full   rounded-xl drop-shadow-xl lg:bg-transparent bg-white relative '>
-								<img
-									src={projectimg1}
-									className='top-0 absolute object-cover lg:hidden w-full h-full rounded-lg z-0 opacity-10'
-									alt=''
-								/>
-								<div className='z-[999] lg:py-0 lg:px-0 px-10 py-10'>
-									<p className='font-reguler text-lg'>Featured Project</p>
-									<h3 className='font-semibold sm:text-5xl text-4xl md:py-5 py-2'>
-										Landing Page Company
-									</h3>
-									<div className='font-reguler md:text-lg text-md py-2'>
-										<p>
-											Lorem ipsum dolor sit amet consectetur adipisicing elit.
-											Illum, possimus, magnam error nobis nesciunt maxime nihil
-											quia voluptate vel ea omnis aliquid? Officiis quas, eos
-											rerum aspernatur at exercitationem assumenda.
-										</p>
-										<p>
-											Lorem ipsum dolor sit amet consectetur adipisicing elit.
-											Illum, possimus, magnam error nobis nesciunt maxime nihil
-											quia voluptate vel ea omnis aliquid? Officiis quas, eos
-											rerum aspernatur at exercitationem assumenda.
-										</p>
-									</div>
-									<div className='flex gap-5 font-medium black py-2'>
-										<span>HTML</span>
-										<span>TailwindCSS</span>
-										<span>React</span>
-									</div>
-									<div className='flex gap-5 py-2'>
-										<img src={gh} alt='' className='w-6 h-6' />
-										<svg
-											xmlns='http://www.w3.org/2000/svg'
-											className='h-7 w-7'
-											fill='none'
-											viewBox='0 0 24 24'
-											stroke='currentColor'
-											strokeWidth={2}>
-											<path
-												strokeLinecap='round'
-												strokeLinejoin='round'
-												d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
-											/>
-										</svg>
-									</div>
-								</div>
-							</div>
-							<div>
-								{/* <img
-									src={projectimg2}
-									alt=''
-									className='w-1/2 h-1/2 absolute top-0 -right-48 rounded-lg'
-								/> */}
-								<div className='w-full h-full lg:block hidden'>
-									<img
-										src={projectimg1}
 										className='object-cover w-full h-full rounded-lg drop-shadow-2xl mt-24 z-[999]'
 										alt=''
 									/>

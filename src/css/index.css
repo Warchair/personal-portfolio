@@ -4,10 +4,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap");
 
 /* width */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
 	width: 7px;
 	height: 7px;
-}
+} */
 
 /* Track */
 ::-webkit-scrollbar-track {
@@ -21,9 +21,9 @@
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
 	background: #555;
-}
+} */
 
 .links-verticals {
 	display: grid;
