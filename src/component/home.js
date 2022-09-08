@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react"
 import Navbar from "./navbar"
-import bg from "../assets/pictures/bg.png"
 import Contact from "./contact"
 import front from "../assets/pictures/front-end.png"
 import simple from "../assets/pictures/simple.png"
@@ -8,7 +7,9 @@ import mypict from "../assets/pictures/mypict.JPG"
 import name from "../assets/pictures/name.png"
 import resume from "../assets/resume/resume.pdf"
 import { education, skills, project, interest } from "./resume"
+import ig from "../assets/logo/instagram.svg"
 import gh from "../assets/logo/github.svg"
+import tw from "../assets/logo/twitter.svg"
 import projectimg1 from "../assets/pictures/img1.png"
 import projectimg2 from "../assets/pictures/img2.png"
 import projectimg3 from "../assets/pictures/img3.png"
@@ -113,11 +114,11 @@ export default function Home() {
 								</h1>
 							</div>
 							{/* <div className='w-2/3 md:h-1 h-[2px] bg-gray-500 mt-5'></div> */}
-							<p className='lg:text-lg md:text-base text-sm font-normal md:w-1/2 w-full mt-5'>
+							<h6 className='lg:text-lg text-base font-normal md:w-1/2 w-full mt-5'>
 								Hallo, saya adalah seorang Front End Developer yang berfokus
 								pada menciptakan design web yang simple, interactive, and
 								responsive diberbagai device
-							</p>
+							</h6>
 						</div>
 						<button className='md:px-6 md:py-4 px-3 py-3 md:text-lg text-md flex gap-2 bg-black text-white mt-5 cursor-pointer'>
 							<button onClick={() => handleRef()}>
@@ -129,13 +130,7 @@ export default function Home() {
 								fill='none'
 								viewBox='0 0 24 24'
 								stroke='currentColor'
-								strokeWidth={2}>
-								<path
-									strokeLinecap='round'
-									strokeLinejoin='round'
-									d='M14 5l7 7m0 0l-7 7m7-7H3'
-								/>
-							</svg>
+								strokeWidth={2}></svg>
 						</button>
 					</div>
 				</div>
@@ -146,7 +141,7 @@ export default function Home() {
 					<div className='pt-36 text-center relative' ref={ref}>
 						<img
 							src={simple}
-							className='absolute right-0 lg:bottom-0 -bottom-20 lg:h-full h-5/6 '
+							className='absolute right-0 lg:bottom-0 -top-0 lg:h-full h-5/6 '
 							alt=''
 						/>
 						<div className='md:text-7xl sm:text-6xl  xs:text-5xl text-4xl font-bold gap-5 flex flex-col'>
@@ -160,7 +155,7 @@ export default function Home() {
 							<h1 className='text-gray-800'>Design</h1>
 						</div>
 						<div>
-							<h6 className='font-medium text-center lg:text-lg md:text-base text-sm  py-10 md:w-2/4 w-full mx-auto text-gray-500'>
+							<h6 className='font-normal text-center lg:text-lg md:text-base text-sm  py-10 md:w-2/4 w-full mx-auto text-gray-500'>
 								Dalam membuat sebuah interface website, banyak element penting
 								yang saya terapin, yaitu simple, clean, responsif desain dan
 								desain yang interaktif, untuk menambah kesan hidup untuk
@@ -453,6 +448,23 @@ export default function Home() {
 							onClick={() => contactClick()}>
 							Contact Me
 						</button>
+						<div className='flex space-x-6 items-center justify-center mt-5'>
+							<a
+								className='hover:-translate-y-2 duration-400 transition-all ease-out'
+								href='https://instagram.com/anwar.chair'>
+								<img className='w-6 h-6' src={ig} alt='' />
+							</a>
+							<a
+								className='hover:-translate-y-2 duration-150 transition-all ease-out'
+								href='https://twitter.com/people_bngsd'>
+								<img className='w-6 h-6' src={tw} alt='' />
+							</a>
+							<a
+								className='hover:-translate-y-3 duration-150 transition-all ease-out'
+								href='https://github.com/warchair'>
+								<img className='w-6 h-6' src={gh} alt='' />
+							</a>
+						</div>
 					</div>
 					<p className='py-10 font-medium text-lg text-center'>
 						@copyright 2022
