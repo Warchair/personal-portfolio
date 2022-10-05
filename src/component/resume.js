@@ -27,7 +27,7 @@ const Resume = () => {
 	})
 	return (
 		<section className='pt-24 py-24 z-[999] bg-white' id='resume'>
-			<div className='container lg:px-24 px-4 mx-auto'>
+			<div className='container lg:px-24 px-6 mx-auto'>
 				<div className='flex flex-col items-center gap-1'>
 					<h5 className='font-medium text-2xl text-center'>Resume</h5>
 					<div className='h-[0.2px] w-48 bg-gray-500 mx-auto'></div>

@@ -5,7 +5,7 @@ import name from "../assets/pictures/name.png"
 const About = () => {
 	return (
 		<section className='mt-36 py-10 z-30 bg-white' id='aboutme'>
-			<div className='container lg:px-24 px-4 mx-auto '>
+			<div className='container lg:px-24 px-6 mx-auto '>
 				<div className='flex items-center gap-4'>
 					<h5 className='font-medium text-xl'>About Me</h5>
 					<div className='h-[0.2px] w-1/2  bg-gray-500'></div>

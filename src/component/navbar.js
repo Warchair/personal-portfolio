@@ -7,20 +7,13 @@ const Navbar = () => {
 	const handleClick = () => {
 		setOpen(!open)
 	}
-	const [show, setShow] = useState(true)
 
-	const navScroll = () => {
-		if (window.scrollY >= this.lastScroll) {
-			setShow(true)
-		} else {
-			setShow(false)
-		}
-		this.lastScroll = window.scrollY
-	}
 	return (
-		<div
-			className='w-full fixed backdrop-blur-lg drop-shadow-lg z-[999]'
-			onScroll={() => navScroll()}>
+		<div className='w-full fixed backdrop-blur-lg z-[999]'>
+			<div
+				className={`backdrop-blur-lg w-screen h-screen ${
+					open ? "block" : "hidden"
+				}`}></div>
 			<div className='container px-8 py-8 mx-auto w-full'>
 				<div className='flex justify-between'>
 					<div>
@@ -34,14 +27,17 @@ const Navbar = () => {
 							<img src={pict} className='w-7 h-7' alt='' />
 						</Link>
 					</div>
-					<div className={open === true ? "navigation active" : "navigation"}>
-						<div class='nav-items flex gap-10 '>
-							<a
-								className='md:hidden block close cursor-pointer'
+					<div>
+						<div
+							className={`md:relative absolute flex md:flex-row flex-col justify-center items-center bg-white drop-shadow-md gap-10 md:w-auto md:h-auto w-[300px] h-screen top-0 right-0 md:p-0 p-8 transition-all duration-300 ease-in-out ${
+								open ? "translate-x-0" : "translate-x-[300px]"
+							} `}>
+							<span
+								className='md:hidden block cursor-pointer absolute top-8 right-8'
 								onClick={() => handleClick()}>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
-									className='h-6 w-6'
+									className='h-7 w-7'
 									fill='none'
 									viewBox='0 0 24 24'
 									stroke='currentColor'
@@ -52,43 +48,49 @@ const Navbar = () => {
 										d='M6 18L18 6M6 6l12 12'
 									/>
 								</svg>
-							</a>
-							<Link
-								className='cursor-pointer'
-								to='aboutme'
-								spy={true}
-								smooth={true}
-								offset={0}
-								duration={500}>
-								<p>About Me</p>
-							</Link>
-							<Link
-								className='cursor-pointer'
-								to='resume'
-								spy={true}
-								smooth={true}
-								offset={0}
-								duration={500}>
-								<p>Resume</p>
-							</Link>
-							<Link
-								className='cursor-pointer'
-								to='project'
-								spy={true}
-								smooth={true}
-								offset={0}
-								duration={500}>
-								<p>Project</p>
-							</Link>
-							<Link
-								className='cursor-pointer'
-								to='contact'
-								spy={true}
-								smooth={true}
-								offset={0}
-								duration={500}>
-								<p>Contact</p>
-							</Link>
+							</span>
+							<div className='flex md:flex-row flex-col gap-10 md:text-auto text-lg '>
+								<Link
+									className='cursor-pointer'
+									onClick={() => setOpen(!open)}
+									to='aboutme'
+									spy={true}
+									smooth={true}
+									offset={0}
+									duration={500}>
+									<p>About Me</p>
+								</Link>
+								<Link
+									className='cursor-pointer'
+									onClick={() => setOpen(!open)}
+									to='resume'
+									spy={true}
+									smooth={true}
+									offset={0}
+									duration={500}>
+									<p>Resume</p>
+								</Link>
+								<Link
+									className='cursor-pointer'
+									onClick={() => setOpen(!open)}
+									to='project'
+									spy={true}
+									smooth={true}
+									offset={0}
+									duration={500}>
+									<p>Project</p>
+								</Link>
+								<Link
+									className='cursor-pointer'
+									onClick={() => setOpen(!open)}
+									to='contact'
+									spy={true}
+									smooth={true}
+									offset={0}
+									duration={500}>
+									<p>Contact</p>
+								</Link>
+							</div>
 						</div>
 					</div>
 					<a

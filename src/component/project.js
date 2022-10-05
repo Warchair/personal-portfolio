@@ -5,7 +5,7 @@ import gh from "../assets/logo/github.svg"
 const Project = () => {
 	return (
 		<section className='pt-24 py-10 relative bg-white' id='project'>
-			<div className='container lg:px-24 px-4 mx-auto z-20'>
+			<div className='container lg:px-24 px-6 mx-auto z-20'>
 				<div className='flex items-center gap-4'>
 					<h5 className='font-medium text-xl'>Project</h5>
 					<div className='h-[0.1px] w-1/2   bg-gray-400'></div>
@@ -29,7 +29,7 @@ const Project = () => {
 									<div className='font-reguler md:text-lg text-md py-2'>
 										<p>{item.desc}</p>
 									</div>
-									<div className='flex gap-5 font-medium black py-2'>
+									<div className='flex flex-wrap py-2 gap-x-5 font-medium black '>
 										{item.tech?.map((i) => (
 											<span>{i}</span>
 										))}

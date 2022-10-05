@@ -5,11 +5,11 @@ import resume from "../assets/resume/resume.pdf"
 const GetResume = () => {
 	return (
 		<section className='' id='getResume'>
-			<div className='container lg:px-24 px-4 mx-auto md:h-auto h-screen flex justify-center items-center'>
+			<div className='container lg:px-24 px-6 mx-auto md:h-auto h-screen flex justify-center items-center'>
 				<div className='text-center relative md:pt-24 '>
 					<img
 						src={simple}
-						className='absolute right-0 lg:bottom-0 -top-0 lg:h-full h-5/6 '
+						className='absolute right-0 lg:bottom-0 top-10 md:block hidden'
 						alt=''
 					/>
 					<div className='md:text-7xl sm:text-6xl  xs:text-5xl text-4xl font-bold gap-5 flex flex-col'>

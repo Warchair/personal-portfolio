@@ -1,20 +1,53 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
+import emailjs from "@emailjs/browser"
 import sayhello from "../assets/pictures/sayhello.png"
 import ig from "../assets/logo/instagram.svg"
 import gh from "../assets/logo/github.svg"
 import tw from "../assets/logo/twitter.svg"
+import Loading from "./loading"
 
 const Contact = () => {
 	const [isContact, setIsContact] = useState(false)
+	const [isLoading, setIsLoading] = useState(false)
+	const form = useRef()
+	const [valueForm, setValueForm] = useState({
+		name: "",
+		email: "",
+		message: "",
+	})
 
 	const contactClick = () => {
 		setIsContact(!isContact)
 	}
+	const sendEmail = (e) => {
+		e.preventDefault()
+		setIsLoading(true)
+		emailjs
+			.sendForm(
+				"service_va6wy0b",
+				"template_5i3q46e",
+				form.current,
+				"26fXipsrZBTZs-VU6",
+			)
+			.then(
+				(result) => {
+					setIsLoading(false)
+					setValueForm({ name: "", email: "", message: "" })
+					setTimeout(() => {
+						setIsContact(!isContact)
+					}, 200)
+				},
+				(error) => {
+					console.log(error.text)
+				},
+			)
+	}
+
 	return (
 		<div>
 			<section>
 				<div
-					className='container lg:px-24 px-4 mx-auto w-screen py-16 flex flex-col justify-center items-center'
+					className='container lg:px-24 px-6 mx-auto w-screen md:h-auto h-screen py-16 flex flex-col justify-center items-center'
 					id='contact'>
 					<div className='text-center '>
 						<img src={sayhello} className='mx-auto' alt='' />
@@ -55,12 +88,14 @@ const Contact = () => {
 				</div>
 			</section>
 			<div className={isContact === true ? "contacts active" : "contacts"}>
-				<div
+				<form
+					ref={form}
+					onSubmit={sendEmail}
 					className={
 						isContact === true ? "contacts-items active" : "contacts-items"
 					}>
 					<h1 className='text-2xl font-semibold'>Send Email</h1>
-					<a
+					<span
 						className='cursor-pointer absolute top-5 right-5'
 						onClick={() => contactClick()}>
 						<svg
@@ -76,11 +111,16 @@ const Contact = () => {
 								d='M6 18L18 6M6 6l12 12'
 							/>
 						</svg>
-					</a>
+					</span>
 					<div className='flex flex-col gap-3'>
 						<label for='name'>Name</label>
 						<input
+							name='name'
 							type='text'
+							value={valueForm.name}
+							onChange={(e) =>
+								setValueForm({ ...valueForm, name: e.target.value })
+							}
 							placeholder='Your Name'
 							className='py-2 px-4 focus:outline-none bg-gray-50'
 						/>
@@ -88,7 +128,12 @@ const Contact = () => {
 					<div className='flex flex-col  gap-3'>
 						<label for='email'>Email</label>
 						<input
-							type='text'
+							type='email'
+							name='email'
+							value={valueForm.email}
+							onChange={(e) =>
+								setValueForm({ ...valueForm, email: e.target.value })
+							}
 							placeholder='Your Email'
 							className='py-2 px-4 focus:outline-none bg-gray-50'
 						/>
@@ -97,14 +142,22 @@ const Contact = () => {
 						<label for='message'>Message</label>
 						<textarea
 							name='message'
-							id=''
 							cols='30'
 							rows='5'
+							value={valueForm.message}
+							onChange={(e) =>
+								setValueForm({ ...valueForm, message: e.target.value })
+							}
 							placeholder='Your Message'
 							className='py-2 px-4 focus:outline-none bg-gray-50'></textarea>
 					</div>
-					<button className='w-full bg-blue-500 text-white py-3'>SEND!!</button>
-				</div>
+					<button
+						type='submit'
+						disabled={isLoading}
+						className='w-full bg-blue-500 text-white py-3 flex justify-center items-center disabled:bg-blue-300'>
+						{isLoading ? <Loading /> : <span>SEND!!</span>}
+					</button>
+				</form>
 			</div>
 		</div>
 	)
