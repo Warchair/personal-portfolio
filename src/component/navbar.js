@@ -12,7 +12,7 @@ const Navbar = () => {
 		<div className='w-full fixed backdrop-blur-lg z-[999]'>
 			<div
 				className={`backdrop-blur-lg w-screen h-screen ${
-					open ? "block" : "hidden"
+					open ? "md:hidden block" : "hidden"
 				}`}></div>
 			<div className='container px-8 py-8 mx-auto w-full'>
 				<div className='flex justify-between'>
@@ -29,8 +29,8 @@ const Navbar = () => {
 					</div>
 					<div>
 						<div
-							className={`md:relative absolute flex md:flex-row flex-col justify-center items-center bg-white drop-shadow-md gap-10 md:w-auto md:h-auto w-[300px] h-screen top-0 right-0 md:p-0 p-8 transition-all duration-300 ease-in-out ${
-								open ? "translate-x-0" : "translate-x-[300px]"
+							className={`md:relative absolute flex md:flex-row flex-col justify-center items-center md:bg-transparent bg-white drop-shadow-md gap-10 md:w-auto md:h-auto w-[300px] h-screen top-0 right-0 md:p-0 p-8 transition-all duration-300 ease-in-out ${
+								open ? "translate-x-0" : "md:translate-x-0 translate-x-[300px]"
 							} `}>
 							<span
 								className='md:hidden block cursor-pointer absolute top-8 right-8'
@@ -49,7 +49,7 @@ const Navbar = () => {
 									/>
 								</svg>
 							</span>
-							<div className='flex md:flex-row flex-col gap-10 md:text-auto text-lg '>
+							<div className='flex md:flex-row flex-col gap-10 md:text-base text-2xl '>
 								<Link
 									className='cursor-pointer'
 									onClick={() => setOpen(!open)}
