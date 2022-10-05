@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from "react-scroll"
 import pict from "../assets/logo/logo.png"
 
 const Navbar = () => {
@@ -6,7 +7,6 @@ const Navbar = () => {
 	const handleClick = () => {
 		setOpen(!open)
 	}
-
 	const [show, setShow] = useState(true)
 
 	const navScroll = () => {
@@ -17,7 +17,6 @@ const Navbar = () => {
 		}
 		this.lastScroll = window.scrollY
 	}
-
 	return (
 		<div
 			className='w-full fixed backdrop-blur-lg drop-shadow-lg z-[999]'
@@ -25,7 +24,15 @@ const Navbar = () => {
 			<div className='container px-8 py-8 mx-auto w-full'>
 				<div className='flex justify-between'>
 					<div>
-						<img src={pict} className='w-7 h-7' alt='' />
+						<Link
+							className='cursor-pointer'
+							to='Top'
+							spy={true}
+							smooth={true}
+							offset={0}
+							duration={500}>
+							<img src={pict} className='w-7 h-7' alt='' />
+						</Link>
 					</div>
 					<div className={open === true ? "navigation active" : "navigation"}>
 						<div class='nav-items flex gap-10 '>
@@ -46,21 +53,42 @@ const Navbar = () => {
 									/>
 								</svg>
 							</a>
-							<a href='#'>
+							<Link
+								className='cursor-pointer'
+								to='aboutme'
+								spy={true}
+								smooth={true}
+								offset={0}
+								duration={500}>
 								<p>About Me</p>
-							</a>
-							<a href='#'>
-								{/* <i class='fa-solid fa-file'></i> */}
+							</Link>
+							<Link
+								className='cursor-pointer'
+								to='resume'
+								spy={true}
+								smooth={true}
+								offset={0}
+								duration={500}>
 								<p>Resume</p>
-							</a>
-							<a href='#'>
-								{/* <i class='fa-solid fa-file-image'></i> */}
+							</Link>
+							<Link
+								className='cursor-pointer'
+								to='project'
+								spy={true}
+								smooth={true}
+								offset={0}
+								duration={500}>
 								<p>Project</p>
-							</a>
-							<a href='#'>
-								{/* <i class='fa-solid fa-address-book'></i> */}
+							</Link>
+							<Link
+								className='cursor-pointer'
+								to='contact'
+								spy={true}
+								smooth={true}
+								offset={0}
+								duration={500}>
 								<p>Contact</p>
-							</a>
+							</Link>
 						</div>
 					</div>
 					<a
